@@ -539,7 +539,6 @@ class Interpreter:
                             f"Invalid number/register in numeric output near line {ip+1}: '{item}'"
                         )
                 self.output_chunks.append(str(v))
-                self.output_chunks.append("\n")
         else:
             for item in content:
                 v = parse_number_or_none(item)
@@ -657,4 +656,5 @@ Interpreter(lines).run()
 </body>
 </html>
 ```
+
 
