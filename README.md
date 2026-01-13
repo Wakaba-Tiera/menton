@@ -612,12 +612,3 @@ https://wakaba-tiera.github.io/menton/web/
 2 * 9 = 18
 ```
 ---
-
-## 8. 로컬 실행 방법
-
-```bash
-python mentonlang_v3.py program.txt
-```
-
-- `으이?` 토큰은 줄바꿈으로 자동 변환된다.
-- 실행 결과는 표준 출력으로 출력된다.
