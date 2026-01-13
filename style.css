@@ -1,0 +1,10 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 16px; }
+textarea { width: 100%; height: 340px; box-sizing: border-box; }
+pre {
+  background:#111; color:#eee; padding:12px; white-space:pre-wrap;
+  border-radius:10px; min-height: 140px; box-sizing: border-box;
+}
+button { padding: 10px 14px; cursor: pointer; }
+.row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin: 10px 0; }
+.muted { opacity:.75; }
+.small { font-size: 12px; }
