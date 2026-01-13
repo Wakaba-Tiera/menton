@@ -1,28 +1,47 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Menton Web Runner</title>
-  <link rel="stylesheet" href="./style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Menton Web Runner</title>
+<link rel="stylesheet" href="./style.css" />
+
+
+<!-- CodeMirror 5 (light) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
 </head>
 <body>
 
+
 <h1>Menton Web Runner</h1>
 
+
 <div class="row">
-  <button id="runBtn">실행</button>
-  <span id="status" class="muted"></span>
-  <span class="muted small">Pyodide 로딩이 처음엔 조금 걸릴 수 있음</span>
+<button id="runBtn">실행</button>
+<span id="status" class="muted"></span>
+<span class="muted small">Pyodide 로딩이 처음엔 조금 걸릴 수 있음</span>
 </div>
 
-<textarea id="code"></textarea>
+
+<!-- CodeMirror는 textarea를 기반으로 생성되므로 textarea는 숨기고, 에디터는 #editor에 표시 -->
+<textarea id="code" style="display:none"></textarea>
+<div id="editor" class="editor"></div>
+
 
 <h3>출력</h3>
 <pre id="out"></pre>
 
+
 <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+
+
+<!-- CodeMirror 5 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/mode/simple.min.js"></script>
+
+
 <script src="./app.js"></script>
+
 
 </body>
 </html>
