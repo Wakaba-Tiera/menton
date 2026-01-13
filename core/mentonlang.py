@@ -509,15 +509,25 @@ class Interpreter:
                 continue
 
             if line.startswith(TOK_MUL):
-                rest = line[len(TOK_MUL):].strip()
-                if not rest:
-                    raise SyntaxError(f"MUL missing operand at line {ip+1}")
-                if rest not in REG_TO_IDX:
-                    raise SyntaxError(f"MUL operand must be a register token at line {ip+1}: '{rest}'")
-                rhs = self.regs[REG_TO_IDX[rest]]
-                self.set_cur_value(self.cur_value() * rhs)
-                ip += 1
-                continue
+    rest = line[len(TOK_MUL):].strip()
+    if not rest:
+        raise SyntaxError(f"MUL missing operand at line {ip+1}")
+
+    # 레지스터 또는 숫자(아랍숫자/웃음숫자) 둘 다 허용
+    if rest in REG_TO_IDX:
+        rhs = self.regs[REG_TO_IDX[rest]]
+    else:
+        v = parse_number_or_none(rest)
+        if v is None:
+            raise SyntaxError(
+                f"MUL operand must be a register token or number at line {ip+1}: '{rest}'"
+            )
+        rhs = v
+
+    self.set_cur_value(self.cur_value() * rhs)
+    ip += 1
+    continue
+
 
             raise SyntaxError(f"Unknown statement at line {ip+1}: '{line}'")
 
