@@ -269,9 +269,6 @@ https://wakaba-tiera.github.io/menton/web/
 
 ---
 
-## 4. 조건문 / 5. 반복문 / 6. 출력 / 7. 예제 / 8. 실행 방법
-
----
 
 ## 4. 조건문
 
