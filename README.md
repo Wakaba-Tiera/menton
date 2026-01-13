@@ -144,7 +144,6 @@ https://wakaba-tiera.github.io/menton/web/
 ```
 
 - 스택 top에 `+5`를 수행한다.
-- 6~9를 표현하기 위한 자리 보조가 아니라, **독립적인 연산자**이다.
 
 ---
 
