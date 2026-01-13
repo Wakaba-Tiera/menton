@@ -172,7 +172,7 @@ https://wakaba-tiera.github.io/menton/web/
 
 #### 3
 ```text
-훠 훠 훠
+훠훠훠
 ```
 → 1 + 1 + 1 = 3
 
@@ -180,7 +180,7 @@ https://wakaba-tiera.github.io/menton/web/
 
 #### 12
 ```text
-훠 훳 훠 훠
+훠훳훠훠
 ```
 → (1×10) + 1 + 1 = 12
 
@@ -188,7 +188,7 @@ https://wakaba-tiera.github.io/menton/web/
 
 #### 6
 ```text
-훠 훠러
+훠훠러
 ```
 → 1 + 5 = 6
 
@@ -196,7 +196,7 @@ https://wakaba-tiera.github.io/menton/web/
 
 #### 105
 ```text
-훠 허 훠 훠 훠 훠 훠
+훠허훠훠훠훠훠
 ```
 → (1×100) + 5 = 105
 
@@ -204,7 +204,7 @@ https://wakaba-tiera.github.io/menton/web/
 
 #### 1111
 ```text
-훠 헛 훠 허 훠 훳 훠
+훠헛훠허훠훳훠
 ```
 → 1000 + 100 + 10 + 1 = 1111
 
@@ -212,7 +212,7 @@ https://wakaba-tiera.github.io/menton/web/
 
 #### 20001
 ```text
-훠 훳훳훳훳 훠 훳훳훳훳 훠
+훠훳훳훳훳훠훳훳훳훳훠
 ```
 → 10000 + 10000 + 1 = 20001
 
