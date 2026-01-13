@@ -1,5 +1,8 @@
 # Menton Web Runner (분리 버전)
 
+https://wakaba-tiera.github.io/menton/web/
+바로가기
+
 ## 폴더 구조
 - `web/` : UI (index.html, app.js, style.css)
 - `core/` : 언어 본체 (mentonlang.py)
