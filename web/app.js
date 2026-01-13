@@ -85,15 +85,9 @@ window.__menton_loaded = true;
 
 statusEl.textContent = "준비됨";
 }
-};
-Interpreter(lines).run()
-    `);
 
-    outEl.textContent = result ?? "";
-    statusEl.textContent = "완료";
-  } catch (e) {
-    statusEl.textContent = "에러";
-    outEl.textContent = String(e);
-    console.error(e);
-  }
+
+document.getElementById("runBtn").onclick = async () => {
+outEl.textContent = "";
+statusEl.textContent = "실행 중...";
 };
