@@ -1,10 +1,34 @@
 body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 16px; }
-textarea { width: 100%; height: 340px; box-sizing: border-box; }
-pre {
-  background:#111; color:#eee; padding:12px; white-space:pre-wrap;
-  border-radius:10px; min-height: 140px; box-sizing: border-box;
-}
 button { padding: 10px 14px; cursor: pointer; }
 .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin: 10px 0; }
 .muted { opacity:.75; }
 .small { font-size: 12px; }
+
+
+/* 에디터 컨테이너 */
+.editor { width: 100%; }
+
+
+/* CodeMirror(입력창) 라이트 테마: 흰 배경 + 검정 글자 */
+.CodeMirror {
+height: 340px;
+border: 1px solid #ddd;
+border-radius: 10px;
+box-sizing: border-box;
+background: #fff;
+color: #000;
+}
+
+
+/* 주석: 회색 + 이탤릭 */
+.cm-comment {
+color: #8b949e;
+font-style: italic;
+}
+
+
+/* 출력 영역(기존 유지: 다크) */
+pre {
+background:#111; color:#eee; padding:12px; white-space:pre-wrap;
+border-radius:10px; min-height: 140px; box-sizing: border-box;
+}
