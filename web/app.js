@@ -1,8 +1,6 @@
 const codeEl = document.getElementById("code");
 const outEl = document.getElementById("out");
 const statusEl = document.getElementById("status");
-const runBtn = document.getElementById("runBtn");
-const clearBtn = document.getElementById("clearBtn");
 
 // GitHub Pages를 web/ 폴더로 배포하는 경우: ../core/mentonlang.py 로 접근 가능
 const MENTON_PY_URL = "../core/mentonlang.py";
@@ -16,22 +14,20 @@ codeEl.value = `# Hello, World! (웃음 숫자)
 허훠러훠훠훠       # 108 l
 허훳훠            # 111 o
 훳훳훳훳훠훠훠훠     # 44  ,
-훳훠              # 32  (space)
-와타시는
-훠러훳훳훳훳        # 87  W
-허훳훳훠          # 111 o
-허훠러훠훠훠       # 114 r
+훳훳훳훠훠          # 32  space
+훠러훳훳훳훠러훠훠   # 87  W
+허훳훠            # 111 o
+허훳훠훠훠훠        # 114 r
 허훠러훠훠훠       # 108 l
-허훳훠            # 100 d
-훳훳훳훳훳          # 33  !
-요호호호이
+허                # 100 d
+훳훳훳훠훠훠          # 33  !
+한다는 것이야
 `;
 
-// Pyodide 초기화(1회)
 const pyodideReady = (async () => {
-  const pyodide = await loadPyodide({
-    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.25.1/full/",
-  });
+  statusEl.textContent = "Pyodide 로딩 중...";
+  const pyodide = await loadPyodide();
+  statusEl.textContent = "준비됨";
   return pyodide;
 })();
 
@@ -48,15 +44,18 @@ async function loadMentonPySource() {
 
 async function ensureInterpreterLoaded(pyodide) {
   if (window.__menton_loaded) return;
+  statusEl.textContent = "인터프리터 로딩 중...";
 
   let src = await loadMentonPySource();
   src = stripMain(src);
 
   pyodide.runPython(src);
   window.__menton_loaded = true;
+
+  statusEl.textContent = "준비됨";
 }
 
-runBtn.onclick = async () => {
+document.getElementById("runBtn").onclick = async () => {
   outEl.textContent = "";
   statusEl.textContent = "실행 중...";
 
@@ -66,11 +65,8 @@ runBtn.onclick = async () => {
 
     const userCode = codeEl.value;
 
-    // JS -> Python 안전 전달
-    pyodide.globals.set("USER_CODE", userCode);
-
     const result = pyodide.runPython(`
-src = preprocess(USER_CODE)
+src = preprocess(${JSON.stringify(userCode)})
 lines = src.splitlines()
 Interpreter(lines).run()
     `);
@@ -82,11 +78,4 @@ Interpreter(lines).run()
     outEl.textContent = String(e);
     console.error(e);
   }
-};
-
-clearBtn.onclick = () => {
-  codeEl.value = "";
-  outEl.textContent = "";
-  statusEl.textContent = "준비됨";
-  codeEl.focus();
 };

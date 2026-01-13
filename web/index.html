@@ -4,24 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Menton Web Runner</title>
-  <link rel="stylesheet" href="./style_v2.css" />
-  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
 <h1>Menton Web Runner</h1>
 
 <div class="row">
-  <button id="runBtn" type="button">실행</button>
-  <button id="clearBtn" type="button">모두 지우기</button>
-  <span id="status" class="muted">준비됨</span>
+  <button id="runBtn">실행</button>
+  <span id="status" class="muted"></span>
+  <span class="muted small">Pyodide 로딩이 처음엔 조금 걸릴 수 있음</span>
 </div>
 
-<textarea id="code" spellcheck="false"></textarea>
+<textarea id="code"></textarea>
 
-<h2>출력</h2>
+<h3>출력</h3>
 <pre id="out"></pre>
 
-<script src="./app_v2.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="./app.js"></script>
+
 </body>
 </html>
