@@ -100,7 +100,7 @@ https://wakaba-tiera.github.io/menton/web/
 
 ---
 
-## 숫자 표기 (웃음 숫자 · 접두 스택 방식)
+## 숫자 표기
 
 ---
 
