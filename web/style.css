@@ -8,3 +8,23 @@ button { padding: 10px 14px; cursor: pointer; }
 .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin: 10px 0; }
 .muted { opacity:.75; }
 .small { font-size: 12px; }
+.codewrap {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.codewrap textarea {
+  flex: 1;
+}
+
+/* 보조 버튼 느낌(원하면 삭제 가능) */
+button.secondary {
+  opacity: .85;
+}
+
+/* 좁은 화면에서는 버튼이 아래로 내려가게 */
+@media (max-width: 640px) {
+  .codewrap { flex-direction: column; }
+  button.secondary { width: 100%; }
+}
