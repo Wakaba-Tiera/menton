@@ -555,7 +555,7 @@ https://wakaba-tiera.github.io/menton/web/
 5 4 3 2 1
 ```
 
-### 예제 4: 구구단 출력(2단)
+### 심화 예제 : 구구단 출력(2단)
 
 ```text
 # a = 2
