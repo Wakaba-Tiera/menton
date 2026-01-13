@@ -29,7 +29,7 @@ CMP_GT = "응나멘똔"
 CMP_LT = "응너도혁"
 
 TOK_PRINT_START = "와타시는"
-TOK_PRINT_NUM_END = "이에요"
+TOK_PRINT_NUM_END = "이라는 것이야"
 TOK_PRINT_CHAR_END = "한다는 것이야"
 
 # Laugh-number tokens
