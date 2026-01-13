@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menton Web Runner</title>
+  <link rel="stylesheet" href="./style_v2.css" />
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+</head>
+<body>
+
+<h1>Menton Web Runner</h1>
+
+<div class="row">
+  <button id="runBtn" type="button">실행</button>
+  <button id="clearBtn" type="button">모두 지우기</button>
+  <span id="status" class="muted">준비됨</span>
+</div>
+
+<textarea id="code" spellcheck="false"></textarea>
+
+<h2>출력</h2>
+<pre id="out"></pre>
+
+<script src="./app_v2.js"></script>
+</body>
+</html>
