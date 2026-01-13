@@ -6,22 +6,23 @@ const statusEl = document.getElementById("status");
 const MENTON_PY_URL = "../core/mentonlang.py";
 
 // 기본 예제
-codeEl.value = `# Hello, World! (웃음 숫자)
-와타시는
-훠러훳훳훠훠        # 72  H
-허훠              # 101 e
-허훠러훠훠훠       # 108 l
-허훠러훠훠훠       # 108 l
-허훳훠            # 111 o
-훳훳훳훳훠훠훠훠     # 44  ,
-훳훳훳훠훠          # 32  space
-훠러훳훳훳훠러훠훠   # 87  W
-허훳훠            # 111 o
-허훳훠훠훠훠        # 114 r
-허훠러훠훠훠       # 108 l
-허                # 100 d
-훳훳훳훠훠훠          # 33  !
+codeEl.value = `와타시는
+훠훠훠훠러훳훠훳
+훠훠허
+훠훠훠훠허훠러
+훠훠훠훠허훠러
+훠훠훠러훠러훳
+훠훠훠훠훠훳훠훳훠훳훠훳
+~
+훠훠훠훠러훳훠훳훠훳훠러
+훠훠훠러훠러훳
+훠훠훠훠훠훠러훠러훳
+훠훠훠훠허훠러
+훠허
+훠훠훠훠훳훠훳훠훳
+ㅢ?!
 한다는 것이야
+
 `;
 
 const pyodideReady = (async () => {
